@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/yemektarifidb/databases/Dbyemektarifi",
+      "type": "mssql.azure",
+      "connectionId": "DESKTOP-24GJBGT:SQLEXPRESS01"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concreate.Category
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kategori Düzenle</title>
+    <link href="~/AdminLTE-3.0.4/login-form-20/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("EditCategory", "Category", FormMethod.Post))
+    {
+    <div class="form-group">
+        @Html.HiddenFor(x => x.CategoryID)
+        <br />
+        @Html.Label("Kategori adı")
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.CategoryName)
+        <br />
+        @Html.Label("Kategori açıklama")
+        @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.CategoryDescription)
+
+        <button class="btn btn-info">Kaydet</button>
+    </div>
+    }
+
+</body>
+</html>

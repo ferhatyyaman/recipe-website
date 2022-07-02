@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concreate.Writer
+@{
+    Layout = null;
+}
+<br />
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kayıt Ol</title>
+    <link href="~/AdminLTE-3.0.4/login-form-20/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    @using (Html.BeginForm("AddWriter", "Login", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.Label("Yazar adı")
+            @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterName)
+            <br />
+            @Html.Label("Yazar Soyadı")
+            @Html.TextBoxFor(x => x.WriterSurname, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterSurname)
+            <br />
+            @Html.Label("Mail")
+            @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterMail)
+            <br />
+            @Html.Label("Parola")
+            @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.WriterPassword)
+            <br />
+
+
+            <button class="btn btn-info">Kaydet</button>
+        </div>
+    }
+</body>
+</html>
+
+
+
